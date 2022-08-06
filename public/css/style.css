@@ -1,0 +1,220 @@
+:root {
+    --mainBackground: hsl(233, 47%, 7%);
+    --cardBackground: hsl(244, 38%, 16%);
+    --softViolet: #aa5cdb;
+
+    --white: hsl(0, 0%, 100%);
+    --mainParagraph: hsla(0, 0%, 100%, 0.75);
+    --statHeadings: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+
+main {
+    background-color: var(--mainBackground);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardContainer {
+    width: 1000px;
+    height: 445px;
+    background-color: var(--cardBackground);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.containerLeft {
+    width: 50%;
+    height: 100%;
+    margin: 0 0 0 4rem;
+}
+
+.contentTitle {
+    height: 30%;
+    width: 75%;
+    display: flex;
+    align-items: flex-end;
+}
+
+h1 {
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    color: var(--white);
+}
+
+span {
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    color: var(--softViolet);
+}
+
+.contentParagraph {
+    width: 80%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.contentParagraph p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--mainParagraph);
+    line-height: 1.75rem;
+    font-weight: 400;
+}
+
+.contentStats {
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+}
+
+h2 {
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.containerStats p {
+    padding-top: .7rem;
+    font-weight: 400;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: .8rem;
+    color: var(--statHeadings);
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+}
+
+.containerRight {
+    background-image: url(../assets/img/image-header-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.overlay {
+    background-color: var(--softViolet);
+    opacity: 100%;
+    height: 100%;
+    opacity: 50%;
+}
+
+@media screen and (max-width: 1001px) {
+    .cardContainer {
+        width: 350px;
+        height: 80vh;
+        background-color: var(--cardBackground);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .containerLeft {
+        width: 100%;
+        height: 100%;
+        margin: 0 0 0 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contentTitle {
+        height: 25%;
+        width: 80%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    
+    h1 {
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+        color: var(--white);
+        text-align: center;
+    }
+    
+    span {
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+        color: var(--softViolet);
+    }
+    
+    .contentParagraph {
+        width: 80%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .contentParagraph p {
+        font-family: 'Lexend Deca', sans-serif;
+        color: var(--mainParagraph);
+        line-height: 1.75rem;
+        font-weight: 400;
+        text-align: center;
+    }
+    
+    .contentStats {
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    h2 {
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.5rem;
+        color: var(--white);
+    }
+
+    .containerStats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .containerStats p {
+        padding-top: .7rem;
+        font-weight: 400;
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: .8rem;
+        color: var(--statHeadings);
+        text-transform: uppercase;
+        letter-spacing: .05rem;
+    }
+
+    
+    .containerRight {
+        background-image: url(../assets/img/image-header-mobile.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 50%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 0px;
+        border-top-left-radius: 10px;
+    }
+}
